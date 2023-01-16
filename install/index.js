@@ -4,6 +4,6 @@ window.addEventListener("load", () => {
 
 async function get() {
   if ("serviceWorker" in navigator) {
-    await navigator.serviceWorker.register("install/install.js.js");
+    await navigator.serviceWorker.register("install/install.js");
   }
 }

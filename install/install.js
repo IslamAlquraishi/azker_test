@@ -1,4 +1,4 @@
-let namePage = "Test Install";
+let namePage = "Azkar App";
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(namePage).then((cache) => {
