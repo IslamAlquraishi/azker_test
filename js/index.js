@@ -5,22 +5,25 @@ let count = 1;
 let minus_count = 1;
 
 brief_btn.addEventListener("click", () => {
-  get();
-  brief_btn.innerHTML = count;
-  count++;
-
   brief_btn.style.transform = "scale(.95)";
   setInterval(() => {
     brief_btn.style.transform = "scale(1)";
-  }, 50);
+  }, 150);
+
+  brief_btn.innerHTML = count;
+  count++;
 
   if (brief_count.innerHTML > 0) {
     brief_count.innerHTML -= minus_count;
   } else brief_count.innerHTML = 0;
+});
 
-  function get() {
-    navigator.vibrate([50, 100]);
-  }
+let vibrates = document.querySelectorAll(".vibrate");
+
+vibrates.forEach((vibrate) => {
+  vibrate.addEventListener("click", () => {
+    navigator.vibrate([50, 50]);
+  });
 });
 
 refresh.addEventListener("click", () => {
