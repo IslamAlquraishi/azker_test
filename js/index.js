@@ -10,7 +10,6 @@ brief_btn.addEventListener("click", () => {
   count++;
 
   brief_btn.style.transform = "scale(.95)";
-
   setInterval(() => {
     brief_btn.style.transform = "scale(1)";
   }, 50);
@@ -18,10 +17,11 @@ brief_btn.addEventListener("click", () => {
   if (brief_count.innerHTML > 0) {
     brief_count.innerHTML -= minus_count;
   } else brief_count.innerHTML = 0;
+
+  function get() {
+    navigator.vibrate([50, 100]);
+  }
 });
-function get() {
-  navigator.vibrate([50, 100]);
-}
 
 refresh.addEventListener("click", () => {
   brief_btn.innerHTML = 0;
